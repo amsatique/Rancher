@@ -1,0 +1,5 @@
+name: Transcode frontend
+description: |
+  Transcode frontend for production
+version: v0.1.0
+category: Others

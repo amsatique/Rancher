@@ -1,0 +1,13 @@
+.catalog:
+  name: "Transcode-frontend"
+  version: "3.2-rancher1"
+  description: "Transcode-frontend"
+  uuid: frontend-1
+  minimum_rancher_version: v0.46.0
+  questions:
+    - variable: pushbullet_api
+      description: "Pushbullet api key"
+      label: "pushbullet_api"
+      type: "string"
+      required: true
+      default: "o.kwaEJqM7aHFY61oRYco469IYni70iu7o"

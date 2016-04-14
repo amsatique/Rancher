@@ -1,0 +1,17 @@
+transcode-frontend:
+  image: amsatique/transcode-frontend:latest
+  labels:
+    io.rancher.container.hostname_override: container_name
+  restart: always
+  volumes:
+    - /data:/data
+  links:
+    - backend:backend
+  environment:
+    PUSHBULLET_API: ${pushbullet_api}
+  tty: true
+  expose:
+    - 80
+  command:
+    - npm
+    - start

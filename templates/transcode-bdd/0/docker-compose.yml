@@ -1,0 +1,12 @@
+transcode-bdd:
+  image: amsatique/transcode-bdd:latest
+  labels:
+    io.rancher.container.hostname_override: container_name
+  restart: always
+  environment:
+MONGODB_PASS: ${mongodb_pass}
+PUSHBULLET_API: ${pushbullet_api}
+  tty: true
+  command: mongod
+  volumes:
+    - /data:/data

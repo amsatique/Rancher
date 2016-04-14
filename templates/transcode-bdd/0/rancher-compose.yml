@@ -1,0 +1,19 @@
+.catalog:
+  name: "transcode-bdd"
+  version: "3.2-rancher1"
+  description: "transcode-bdd"
+  uuid: bdd-1
+  minimum_rancher_version: v0.46.0
+  questions:
+    - variable: mongodb_pass
+      description: "Mongo password"
+      label: "mongodb_pass"
+      type: "string"
+      required: true
+      default: "P@$$w0rd"
+    - variable: pushbullet_api
+      description: "Pushbullet api key"
+      label: "pushbullet_api"
+      type: "string"
+      required: true
+      default: "o.kwaEJqM7aHFY61oRYco469IYni70iu7o"

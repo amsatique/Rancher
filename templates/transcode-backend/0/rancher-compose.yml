@@ -1,0 +1,60 @@
+.catalog:
+  name: "Transcode-backend"
+  version: "Transcode-backend"
+  description: "Transcode-backend"
+  uuid: backend-1
+  minimum_rancher_version: v0.46.0
+  questions:
+    - variable: mongodb_name
+      description: "DB Name"
+      label: "mongodb_name"
+      type: "string"
+      required: true
+      default: "Transcode"
+    - variable: mongodb_user
+      description: "Mongo user"
+      label: "mongodb_user"
+      type: "string"
+      required: true
+      default: "admin"
+    - variable: mongodb_pass
+      description: "Mongo password"
+      label: "mongodb_pass"
+      type: "string"
+      required: true
+      default: "P@$$w0rd"
+    - variable: private_key
+      description: "Private key node engine"
+      label: "private_key"
+      type: "string"
+      required: true
+      default: " "
+    - variable: email
+      description: "Email"
+      label: "email"
+      type: "string"
+      required: true
+    - variable: email_name
+      description: "Email name"
+      label: "Email Name"
+      type: "string"
+      required: true
+      default: "amsatique"
+    - variable: email_passwd
+      description: "Email Password"
+      label: "ReplicaSet Name"
+      type: "string"
+      required: true
+      default: "P@$$w0rd"
+    - variable: mongo_host
+      description: "Mongo Host"
+      label: "mongo_host"
+      type: "string"
+      required: true
+      default: "bdd-1"
+    - variable: pushbullet_api
+      description: "Pushbullet api key"
+      label: "pushbullet_api"
+      type: "string"
+      required: true
+      default: "o.kwaEJqM7aHFY61oRYco469IYni70iu7o"

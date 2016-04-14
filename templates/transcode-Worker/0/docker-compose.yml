@@ -1,0 +1,13 @@
+transcode-worker:
+  image: amsatique/transcode-worker:latest
+  labels:
+    io.rancher.container.hostname_override: container_name
+  restart: always
+  environment:
+    EXTENSION: ${extension}
+    INPUT: ${input}
+    CUSTOMER: ${customer}
+  tty: true
+  expose:
+    - 80
+  command: sh /transcode.sh

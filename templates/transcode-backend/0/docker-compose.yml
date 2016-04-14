@@ -1,0 +1,23 @@
+transcode-backend:
+  image: amsatique/transcode-backend:latest
+  labels:
+    io.rancher.container.hostname_override: container_name
+  restart: always
+  environment:
+    MONGODB_NAME : ${mongodb_name}
+    MONGODB_USER : ${mongodb_user}
+    MONGODB_PASS : ${mongodb_pass}
+    PRIVATE_KEY : ${private_key}
+    EMAIL : ${email}
+    EMAIL_NAME : ${email_name}
+    EMAIL_PASSWD : ${email_passwd}
+    MONGO_HOST : ${mongo_host}
+    PUSHBULLET_API : ${pushbullet_api}
+  tty: true
+  links:
+    - bdd:bdd
+  volumes:
+    - /data:/data
+  command:
+  - npm
+  - start
