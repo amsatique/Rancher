@@ -1,0 +1,11 @@
+.catalog:
+  name: "BK"
+  version: "BK"
+  description: "BK"
+  minimum_rancher_version: v0.46.0
+  questions:
+    - variable: api_key
+      description: "Telegram api key"
+      label: "api_key"
+      type: "string"
+      required: true

@@ -1,0 +1,11 @@
+transcode-backend:
+  image: amsatique/bktelegrambot:latest
+  labels:
+    io.rancher.container.hostname_override: container_name
+  restart: always
+  environment:
+    API_TOKEN : ${api_key}
+  tty: true
+  command:
+  - python3
+  - bot.py
